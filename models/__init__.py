@@ -1,5 +1,5 @@
 import numpy as np
-from activations import step, bipolar_step
+from activations import *
 from utils import encoder, decoder
 
 
