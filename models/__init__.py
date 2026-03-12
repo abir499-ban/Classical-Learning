@@ -1,4 +1,6 @@
-
+import numpy as np
+from activations import step
+from utils import encoder, decoder
 
 
 class BaseModel:

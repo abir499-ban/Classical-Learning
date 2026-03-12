@@ -1,5 +1,4 @@
-import numpy as np
-from models import BaseModel
+from . import *
 
 
 class Hebb(BaseModel):
@@ -9,13 +8,18 @@ class Hebb(BaseModel):
         self.b = 0
     
     def fit(self, X, y):
+        X = encoder(X)
+        y = encoder(y)
+
         for x,t in zip(X,y):
             self.w += x * t
             self.b += t
     
 
     def predict(self, X):
-        return np.dot(X, self.w) + self.b
+        X = encoder(X)
+        y = step(np.dot(X, self.w) + self.b)
+        return decoder(y)
     
     
 
