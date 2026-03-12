@@ -18,7 +18,7 @@ class Hebb(BaseModel):
 
     def predict(self, X):
         X = encoder(X)
-        y = step(np.dot(X, self.w) + self.b)
+        y = bipolar_step(np.dot(X, self.w) + self.b)
         return decoder(y)
     
     
