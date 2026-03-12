@@ -1,0 +1,13 @@
+
+
+
+class BaseModel:
+    def __init__(self, *args, **kwargs):
+        print(args, kwargs)
+        pass 
+
+    def fit(self, X, y):
+        pass 
+
+    def prefdict(self, X):
+        pass
