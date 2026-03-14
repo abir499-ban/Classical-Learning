@@ -1,4 +1,5 @@
 from . import *;
+from losses import calculate_MSE as msefunc
 
 
 class Adaline(BaseModel):
@@ -12,16 +13,17 @@ class Adaline(BaseModel):
     def fit(self, X, y):
         X,y = encoder(X), encoder(y)
         for e in range(self.epochs):
-            mse = 0
+            
+            
             for x,t in zip(X,y):
                 y_in = np.dot(self.w, x) + self.b 
                 error = t-y_in
                 
                 self.w += self.learning_rate * error * x 
                 self.b += self.learning_rate * error
-                mse += error ** 2
+                
             
-            mse /=  len(X)
+            mse = msefunc(y, np.dot(X, self.w) + self.b)
             print(f"Epoch : {e+1}, Mean Square Error : {mse}")
 
             if mse <=  0.001:
