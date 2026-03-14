@@ -11,5 +11,5 @@ class BaseModel:
     def fit(self, X, y):
         pass 
 
-    def prefdict(self, X):
+    def predict(self, X):
         pass
