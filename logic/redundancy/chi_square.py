@@ -1,6 +1,3 @@
-from re import L
-
-
 age = [43, 21, 25, 42, 57, 59]
 glucose = [99, 65, 79, 75, 87, 61]
 
@@ -16,7 +13,7 @@ GLUCOSE_THRESHOLD = 77
 
 for x,y in zip(age , glucose):
     ageIndx = 0 if x < AGE_THRESHOLD else 1
-    glucoseIndx = 0 if x < GLUCOSE_THRESHOLD else 1
+    glucoseIndx = 0 if y < GLUCOSE_THRESHOLD else 1
 
     contigencyTable[ageIndx][glucoseIndx] += 1
 
