@@ -1,3 +1,12 @@
 {
-    "python-envs.defaultEnvManager": "ms-python.python:venv"
+    "python-envs.defaultEnvManager": "ms-python.python:venv",
+    "python.analysis.autoImportCompletions": true,
+    "editor.suggestOnTriggerCharacters": true,
+    "[python]": {
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": false
+        }
+    }
 }
