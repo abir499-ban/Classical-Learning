@@ -1,0 +1,8 @@
+
+
+
+POPULATION_SIZE = 8
+GENERATIONS = 20
+SampleCount = 150
+FeaturesCount = 4
+MUTATION_RATE = 0.03
