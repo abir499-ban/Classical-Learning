@@ -41,3 +41,19 @@ def getTarget():
 
     return target 
 
+def makeBins(data, num_bins):
+    maxi = max(data)
+    mini = min(data)
+
+    w = (maxi - mini) / num_bins
+
+    feature_bins = []
+
+    for x in data:
+        if x == maxi:
+            feature_bins.append(num_bins - 1)
+        else:
+            feature_bins.append(int((x - mini) / w))
+
+    return feature_bins
+
