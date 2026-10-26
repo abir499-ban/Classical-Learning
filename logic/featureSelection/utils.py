@@ -12,6 +12,12 @@ TARGETINDX = {
     "Iris-virginica" : 2
 }
 
+CLASS_NAMES = {
+    0 : "Iris-setosa",
+    1 : "Iris-versicolor",
+    2 : "Iris-virginica"
+}
+
 FEATURE_NAME={
     0 : "Sepal Length",
     1 : "Sepal Width",
