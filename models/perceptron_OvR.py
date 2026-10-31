@@ -33,7 +33,7 @@ def trainPerceptron(X_train , Y_train , targetClass, learningRate , g):
                 continue
 
             isError = True
-            Error += (actualClass - y_out) * 2
+            Error += (actualClass - y_out) ** 2
             for j in range(len(weights)):
                 weights[j] += learningRate * X_train[i][j] * actualClass
 
